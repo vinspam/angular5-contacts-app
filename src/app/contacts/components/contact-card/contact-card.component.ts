@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IContact } from '../../interfaces/icontact.interface';
+import { ContactsService } from '../../services/contacts.service';
 
 @Component({
   selector: 'app-contact-card',
@@ -10,10 +11,14 @@ export class ContactCardComponent {
 
   @Input() contact: IContact;
 
-  constructor() { }
+  constructor(private service: ContactsService) { }
 
   getNameFirstChar(name: string) {
     return name.charAt(0);
+  }
+
+  delete() {
+    this.service.delete(this.contact);
   }
 
 }
