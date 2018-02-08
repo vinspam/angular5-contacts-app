@@ -2,6 +2,11 @@
 @import 'theme';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 
+$primaryCol: #2196f3;
+$accentCol: #ff4081;
+$errorCol: #f44336;
+$successCol: #8bc34a;
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -9,4 +14,14 @@ body {
 
 .center {
     text-align: center;
+}
+
+.errorCol {
+    color: $errorCol !important;
+}
+
+.page-header {
+    text-align: center;
+    font-size: 32px;
+    color: $accentCol;
 }
