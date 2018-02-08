@@ -1,5 +1,4 @@
 @import '../../../../variables';
-
 $card-height: 60px;
 :host {
     display: block;
@@ -17,7 +16,7 @@ $card-height: 60px;
         display: table;
         width: $card-height;
         height: $card-height;
-        background-color: lightcoral;
+        background-color: #8bc34a;
         border-radius: 50%;
         margin-right: 16px;
         .letter {
