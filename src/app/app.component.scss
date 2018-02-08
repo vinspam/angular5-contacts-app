@@ -1,0 +1,8 @@
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    &:hover {
+        opacity: 0.6;
+    }
+}

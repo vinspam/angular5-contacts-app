@@ -1,11 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables';
 @import 'theme';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
-
-$primaryCol: #2196f3;
-$accentCol: #ff4081;
-$errorCol: #f44336;
-$successCol: #8bc34a;
 
 body {
     font-family: 'Roboto', sans-serif;
