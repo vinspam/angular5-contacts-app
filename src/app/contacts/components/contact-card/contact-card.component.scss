@@ -1,18 +1,46 @@
+$card-height: 60px;
+
+:host {
+    display: block;
+    width: 640px;
+    margin: 0 auto;
+}
+
 .card-wrap {
-    width: 100%;
-    height: 60px;
-    margin: 20px;
+    display: flex;
+    height: $card-height;
+    padding: 16px;
+    margin: 10px 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     .avatar {
         display: table;
-        width: 60px;
-        height: 60px;
+        width: $card-height;
+        height: $card-height;
         background-color: lightcoral;
         border-radius: 50%;
+        margin-right: 16px;
         .letter {
             display: table-cell;
             vertical-align: middle;
             font-size: 32px;
             color: white;
+        }
+    }
+    .group {
+        display: inline-block;
+        width: 240px;
+        text-align: left;
+        .icon {
+            line-height: $card-height;
+            font-size: 24px;
+            color: darkgray;
+            margin: 0 4px;
+        }
+        .detail {
+            display: inline-block;
+            font-size: 24px;
+            line-height: $card-height;
+            color: #6c6c6c;
         }
     }
 }
