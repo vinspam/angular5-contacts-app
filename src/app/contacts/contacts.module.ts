@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ContactsRoutingModule } from './contacts-routing.module';
 /* Components */
 import { ContactsListComponent } from './components/contacts-list/contacts-list.component';
+import { ContactCardComponent } from './components/contact-card/contact-card.component';
+/* Services */
 import { ContactsService } from './services/contacts.service';
 
 @NgModule({
@@ -12,7 +14,8 @@ import { ContactsService } from './services/contacts.service';
     ContactsRoutingModule
   ],
   declarations: [
-    ContactsListComponent
+    ContactsListComponent,
+    ContactCardComponent
   ],
   providers: [ContactsService]
 })

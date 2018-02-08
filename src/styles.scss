@@ -3,7 +3,7 @@
 @import 'theme';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 
-body {
+body, p {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
@@ -20,4 +20,8 @@ body {
     text-align: center;
     font-size: 32px;
     color: $accentCol;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
