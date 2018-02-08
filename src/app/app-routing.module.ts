@@ -1,3 +1,4 @@
+/* Modules */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 /* Components */
@@ -7,7 +8,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'notfound', component: NotFoundComponent },
-  { path: '**', redirectTo: '/notfound' }
+  { path: 'contacts', loadChildren: 'app/contacts/contacts.module#ContactsModule' },
+  { path: '**', redirectTo: '/notfound' },
 ];
 
 @NgModule({

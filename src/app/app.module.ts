@@ -1,7 +1,7 @@
+/* Modules */
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-/* Modules */
 import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 /* Components */
@@ -18,6 +18,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule
   ],
