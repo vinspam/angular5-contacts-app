@@ -1,0 +1,18 @@
+@import '../../../../variables';
+
+.prefix {
+    color: $grayCol;
+    margin: 0 5px;
+}
+
+.form-wrap {
+    max-width: 360px;
+    text-align: center;
+    margin: 0 auto;
+    .input-wrap {
+        margin: 20px 0;
+    }
+    .mat-form-field {
+        width: 100%;
+    }
+}

@@ -41,6 +41,7 @@ $card-height: 60px;
             font-size: 24px;
             line-height: $card-height;
             color: #6c6c6c;
+            text-transform: capitalize;
         }
     }
     .delete-wrap {

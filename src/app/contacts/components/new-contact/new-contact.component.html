@@ -1,3 +1,61 @@
-<p>
-  new-contact works!
-</p>
+<h1 class="page-header">Create Contact</h1>
+<div class="form-wrap">
+  <form [formGroup]="contactForm" (ngSubmit)="create()">
+    <div class="input-wrap">
+      <mat-form-field>
+        <span matPrefix>
+          <i class="prefix fa fa-user"></i>
+        </span>
+        <input matInput #inputName type="text" minlength="2" maxlength="30" name="name" [formControl]="name" placeholder="Name">
+        <mat-hint align="end">{{inputName.value?.length || 0}}/30</mat-hint>
+        <mat-error *ngIf="name.hasError('minlength')">
+          Name must contain at least 2 characters
+        </mat-error>
+        <mat-error *ngIf="name.hasError('pattern')">
+          Name can contain only letters and numbers
+        </mat-error>
+        <mat-error *ngIf="name.hasError('required')">
+          Name is
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="input-wrap">
+      <mat-form-field>
+        <span matPrefix>
+          <i class="prefix fa fa-user"></i>
+        </span>
+        <input matInput #inputSurname type="text" minlength="2" maxlength="30" name="surname" [formControl]="surname" placeholder="Surname">
+        <mat-hint align="end">{{inputSurname.value?.length || 0}}/30</mat-hint>
+        <mat-error *ngIf="surname.hasError('minlength')">
+          Surname must contain at least 2 characters
+        </mat-error>
+        <mat-error *ngIf="surname.hasError('pattern')">
+          Surname can contain only letters and numbers
+        </mat-error>
+        <mat-error *ngIf="surname.hasError('required')">
+          Surname is
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="input-wrap">
+      <mat-form-field>
+        <span matPrefix>
+          <i class="prefix fa fa-phone"></i>
+        </span>
+        <input matInput type="tel" name="telephone" minlength="10" maxlength="12" [formControl]="telephone" placeholder="Telephone">
+        <mat-error *ngIf="telephone.hasError('pattern')">
+          Please enter a valid telephone number
+        </mat-error>
+        <mat-error *ngIf="telephone.hasError('required')">
+          Telephone field is
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button type="submit" [disabled]="!contactForm.valid" color="accent">
+      <i class="fa fa-paper-plane"></i> Create
+    </button>
+  </form>
+</div>
