@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 import { ContactsService } from '../../services/contacts.service';
 import { IContact } from '../../interfaces/icontact.interface';
 
@@ -19,7 +21,9 @@ export class NewContactComponent implements OnInit {
 
   constructor(
     private service: ContactsService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private snackBar: MatSnackBar,
+    private router: Router
   ) {
     this.name = new FormControl('', [
       Validators.required,
@@ -50,6 +54,15 @@ export class NewContactComponent implements OnInit {
   create() {
     const newContact: IContact = this.contactForm.value;
     this.service.create(newContact);
+    this.openSnackbar('New contact successfully created.');
+    setTimeout(() => this.router.navigate(['/contacts']), 4000);
+  }
+
+  openSnackbar(message: string) {
+    const config = new MatSnackBarConfig();
+    config.duration = 3500;
+    config.extraClasses = ['success'];
+    this.snackBar.open(message, null, config);
   }
 
 }
