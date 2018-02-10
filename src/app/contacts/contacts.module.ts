@@ -6,6 +6,7 @@ import { ContactsRoutingModule } from './contacts-routing.module';
 /* Components */
 import { ContactsListComponent } from './components/contacts-list/contacts-list.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
+import { NewContactComponent } from './components/new-contact/new-contact.component';
 /* Services */
 import { ContactsService } from './services/contacts.service';
 
@@ -17,7 +18,8 @@ import { ContactsService } from './services/contacts.service';
   ],
   declarations: [
     ContactsListComponent,
-    ContactCardComponent
+    ContactCardComponent,
+    NewContactComponent
   ],
   providers: [ContactsService]
 })
