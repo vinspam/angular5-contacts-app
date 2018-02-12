@@ -11,9 +11,6 @@
         <mat-error *ngIf="name.hasError('minlength')">
           Name must contain at least 2 characters
         </mat-error>
-        <mat-error *ngIf="name.hasError('pattern')">
-          Name can contain only letters and numbers
-        </mat-error>
         <mat-error *ngIf="name.hasError('required')">
           Name is
           <strong>required</strong>
@@ -29,9 +26,6 @@
         <mat-hint align="end">{{inputSurname.value?.length || 0}}/30</mat-hint>
         <mat-error *ngIf="surname.hasError('minlength')">
           Surname must contain at least 2 characters
-        </mat-error>
-        <mat-error *ngIf="surname.hasError('pattern')">
-          Surname can contain only letters and numbers
         </mat-error>
         <mat-error *ngIf="surname.hasError('required')">
           Surname is
