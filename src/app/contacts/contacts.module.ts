@@ -23,6 +23,7 @@ import { ContactsService } from './services/contacts.service';
     ContactCardComponent,
     NewContactComponent
   ],
-  providers: [ContactsService]
+  providers: [ContactsService],
+  exports: []
 })
 export class ContactsModule { }
